@@ -36,8 +36,7 @@ using Matrix = boost::numeric::ublas::matrix<T>;
 
 namespace ublas = boost::numeric::ublas;
 
-//*****Push_Back Routine for UBLAS Vektor*****
-
+//-----Push_Back Routine for UBLAS Vektor-----
 template <typename T, typename A>
 void push_back(Vektor<T>& vec, A item) {
 
@@ -45,6 +44,7 @@ void push_back(Vektor<T>& vec, A item) {
 	vec(vec.size() - 1) = item;
 }
 
+//-----Initialize Ublas-Vektor by initializer list-----
 template<typename T, typename A>
 void vec_append(Vektor<A>& v, std::initializer_list<T> l) {
 
@@ -53,6 +53,7 @@ void vec_append(Vektor<A>& v, std::initializer_list<T> l) {
 	}
 }
 
+//-----Initialize Ublas-Matrix by initializer lists-----
 template<typename T, typename A>
 void mat_append(Matrix<A>& mat, std::initializer_list< std::initializer_list<T> > st) {
 
